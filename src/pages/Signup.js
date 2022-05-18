@@ -198,7 +198,7 @@ const closeModal=()=>{
          <Modal modalContent={state.modalContent} closeModal={closeModal} />
         }
     <Divbutton className="col-md-4">
-   <button  type='submit' onClick={checkUsername} className="btn btn-success text-white">Register</button>
+   <button  type='submit' className="btn btn-success text-white">Register</button>
     </Divbutton>
          </Myform>
          <Link style={mystyle} to='../pages/login'> Already have an Account??</Link>

@@ -9,7 +9,7 @@ import useStyles from './Productsfolder/styles';
 import Product from './Productsfolder/product/Product'
 import Sidebar from '../component/Sidebar' 
 import { Link } from 'react-router-dom'
-
+import {Box} from "@mui/material"
 export default function Home() {
   const[prod,setProd]=useState([])
     const {products,loading}=useContext(userContext);
@@ -21,16 +21,16 @@ export default function Home() {
     <div className={classes.toolbar}></div>
     <HomeWrapper>
        <Sidebar />
+       <Box>
       <ProductsPage>
-      <div style={{borderBottom:'1px solid light grey',padding:'-1rem'}}>
+      <div style={{borderBottom:'1px solid light grey',padding:'1rem'}}>
         <Overview  />
       </div>
-     <div className='dropdown-divider'></div>
       <main className={classes.content}>
       <div className={classes.toolbar} />
-<Grid container justify="center" className={classes.root} spacing={4}>
+<Grid container justify="center" className={classes.root} spacing={3}>
 {prod && prod.map((product)=>{
-  return <Grid item xs={12} sm={6} md={4} lg={3} key={product.id} >
+  return <Grid item xs={12} sm={6} md={3} lg={2} key={product.id} >
 <Product {...product}/>
        
     </Grid>
@@ -38,6 +38,7 @@ export default function Home() {
 </Grid>
 </main>
       </ProductsPage>
+      </Box>
     </HomeWrapper>
     </>
   )

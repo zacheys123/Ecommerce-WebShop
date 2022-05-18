@@ -26,7 +26,7 @@ export default function Product({name,description,price,assets,id}) {
 <Typography style={{marginLeft:'.7rem'}} dangerouslySetInnerHTML={{__html: description}} variant='body2' color='textSecondary'/>
 <CardActions className={classes.cardActions}>
 <Typography gutterBottom>
-<Button size="small" variant="contained">Add to Cart</Button>
+<Button size="small" onClick={()=>{handleAddCart(id,1)}} variant="contained">Add to Cart</Button>
 </Typography>
 <IconButton onClick={()=>{handleAddCart(id,1)}}>
 <Badge  color='warning'> 

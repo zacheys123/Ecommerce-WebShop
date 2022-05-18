@@ -38,7 +38,7 @@ function Cart() {
    return(
    
   <div className={classes.empty}>
-    <Typography variant='h5'><code style={{color:'green'}}>Cart Is Empty,Click Add to Cart</code></Typography>  
+    <Typography variant='h5'><code style={{color:'green'}}>Cart Is Empty,Click to Add  Cart</code></Typography>  
   <Link style={{textDecoration: 'none',maxWidth:'fitContent'}} to='/'>
 <ShoppingCartIcon sx={{'fontSize':'5rem','color':'purple'}}/>
 </Link>

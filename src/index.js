@@ -8,11 +8,25 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import './index.css'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
+});
 const root=ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
     <BrowserRouter>
-        <App/>
+     <ThemeProvider theme={theme}>
+      <App/>
+     </ThemeProvider>
     </BrowserRouter>
     </React.StrictMode>
 )

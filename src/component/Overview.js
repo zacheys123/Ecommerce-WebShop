@@ -38,7 +38,7 @@ useEffect(()=>{
 
   return (
       <>
- <div className="header d-flex mr-5 justify-content-between align-items-center">
+ <div style={{borderBottom:'2px solid lightgrey',minHeight:'3rem'}} className="header d-flex mr-5 justify-content-between align-items-center">
       <div className="left__header d-flex justify-content-between align-items-center">
        <H1>MarketPlace Overview</H1>
       </div>
