@@ -103,9 +103,7 @@ confirmPassword:''
       localStorage.setItem('userData',JSON.stringify(state.userData));
    },[state.userData])
 
-const checkUsername=()=>{
 
-}
 const closeModal=()=>{
   dispatch('closeModal');
 }
@@ -168,6 +166,14 @@ const closeModal=()=>{
    <option value="Madagascar" />
    <option value="Namibia" />
    <option value="Pakistan" />
+   <option value="Qatar" />
+   <option value="Russia" />
+   <option value="Serbia" />
+   <option value="Tanazania" />
+   <option value="Uruguay" />
+   <option value="Venezuela" />
+   <option value="Wales" />
+   <option value="Yemen" />
     </datalist>
     </Div>
            <Div className="input-group ">
@@ -179,10 +185,10 @@ const closeModal=()=>{
          </div>
          </Div>
              <Div className="input-group">
-         <Forminput style={{Width:'100%'}} type={state.ispassword ? 'text' : "password"} name='password' value={user.password} onChange={handleinput}  className="form-control" placeholder="Password"/>
+         <Forminput style={{Width:'100%'}} type={state.ispassword ? "text" : "password"} name='password' value={user.password} onChange={handleinput}  className="form-control" placeholder="Password"/>
          </Div>
           <Div className="input-group">
-         <Forminput type={state.ispassword ? 'text' : "password"}  className="form-control" value={user.confirmPassword} onChange={handleinput}  name='confirmPassword' placeholder='Confirm Password'/>
+         <Forminput type={state.ispassword ? "text" : "password"}  className="form-control" value={user.confirmPassword} onChange={handleinput}  name='confirmPassword' placeholder='Confirm Password'/>
            <div className="input-group-prepend">
         <span onClick={()=>dispatch("SHOW_CONFIRMPASSWORD")} className="input-group-text ">{state.ispassword ? <VisibilityIcon/> : <VisibilityOffIcon/> }</span>
         </div>
@@ -202,12 +208,12 @@ const closeModal=()=>{
        :
          <Login/>
          }
-                 {state.userData.map((user)=>{
+        {state.userData.map((user)=>{
     return  <div key={user.id}>
-           <h1 style={{color:'yellow'}}>{user.username}</h1>
+           <Display data={state.userData}/>
          </div>
        })}
-         <Display data={state.userData}/>
+         
 </> 
     )
 }
