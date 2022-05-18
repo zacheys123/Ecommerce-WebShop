@@ -1,0 +1,37 @@
+:root {
+    --primary-color: rgb(221, 243, 201);
+    --secondary-color: rgb(255, 158, 130);
+    --secondary-main-clr: rgb(11, 17, 17);
+    --primary-secondary: white;
+    --background-color: #20bf55;
+    --cancelbg: transparent;
+    --defaultbg: #333;
+    --background: linear-gradient(315deg, var(--background-color) 0%, #01baef 74%, #d98324);
+    --fs-l: 1.9rem;
+    --min-height: 95vh;
+    --fm: Tahoma, Arial, sans-serif,roboto;
+    --fs-x-sm: .92rem;
+    --fs-xxx-sm: .88rem;
+    --fs-xx-sm: .72rem;
+    --fs-sm: 1.22rem;
+    --fs-l: 1.6rem;
+    --fs-xl: 1.9rem;
+    --margin: 1rem 1rem 1rem .9rem;
+    --pad: 15px 20px 15px 1rem;
+    --pad-hover: 15px 20px 15px 1.9rem;
+    --fw-sm: 400;
+    --fw-xl: 500;
+    --br: 10px;
+    --fw-l: 550;
+    --fw-xxl: 600;
+    --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+    --bx-sd: 1rem 1.4rem 2rem 2.5rem #9ca62c ;
+}
+
+
+
