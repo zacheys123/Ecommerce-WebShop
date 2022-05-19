@@ -5,7 +5,10 @@ import useStyles from './Itemstyles'
 export default function CartItem({item}) {
       const classes=useStyles()
         const{handleUpdateCart,handleRemoveCart} =useContext(userContext)
-      console.log(item.image.url)
+     Const[items, setItems]=useState({})
+useEffect(()=>{
+setItems((items)=>...items);
+},[])
   return (
     <Card className={classes.root}>
   <CardMedia image={item.image.url} className={classes.media}/>
