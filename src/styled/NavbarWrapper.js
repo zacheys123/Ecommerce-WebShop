@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 // end of the unordered list styling
 
-export const ListItem=styled.li`
+export const Li=styled.li`
 position:relative;
    list-style-type: none;
     padding:.4rem;

@@ -1,6 +1,6 @@
 import React, { useState,useEffect,useRef} from 'react'
 import {Link} from 'react-router-dom'
-import {H3,Span,Dropdown} from '../styled/NavbarWrapper'
+import {H3,Span,Dropdown,Li} from '../styled/NavbarWrapper'
 import {Menu,Close,EmailRounded,PersonAddAltRounded,GitHub,GroupRounded,HomeTwoTone} from '@mui/icons-material';
 import logo from '../assests/commerce.jpg'
 import useStyles from './navbar/styles'
@@ -64,20 +64,20 @@ const profileref=useRef(null)
    </Typography>
 
      <Typography>  
-       <li  className={classes.item}> 
-        <Link className={classes.item}style={mystyle} to="pages/contact">
+       <Li  className={classes.item}> 
+        <Link className={classes.item} style={mystyle} to="pages/contact">
         Contact
         <Span><EmailRounded sx={{'color':'wheat'}}/></Span>
         </Link>
-        </li >
+        </Li >
         </Typography>
    <Typography>
-        <li className={classes.item}>
+        <Li className={classes.item}>
         <Link style={mystyle} to="pages/about">
         About Us
         <Span><GroupRounded sx={{'color':'wheat'}}/></Span>
         </Link>
-        </li>
+        </Li>
     </Typography>
     <Typography>
         <li  className={classes.item}>
@@ -87,17 +87,17 @@ const profileref=useRef(null)
         </li>
     </Typography>
     <Typography>
-       <li  className={classes.item}>
+       <Li  className={classes.item}>
          <Link style={mystyle} to="pages/logout">
         Logout
         </Link>
-      </li>
+      </Li>
     </Typography>
 
     <menu className={classes.menu}>
     {issettings &&
     <div className={classes.settings}>
-    Open user settings</div>
+    Open settings</div>
     }
             <Avatar onMouseOver={()=>setSettings(true)}
             onMouseOut={()=>setSettings(false)} onClick={()=>{setProfile(true)}} src={props.firstname} sx={{'marginLeft':'2rem','marginRight':'-1rem','height':'4rem','width':'4rem','cursor':'pointer',   transition: 'all 1.4s  ease-in-out'}}/>
@@ -107,13 +107,13 @@ const profileref=useRef(null)
           <li style={mylist} ><Link style={mylinks} to='profile'>View Profile</Link></li>
           <li style={mylist} ><Link style={mylinks}  to='Email'>Email someone</Link></li>
           <div>
-          <li style={mygithub} ><span><GitHub/></span><Link style={mylinks}  to='pages/github'>Connect github</Link></li>
+          <Li style={mygithub} ><span><GitHub/></span><Link style={mylinks}  to='pages/github'>Connect github</Link></Li>
           </div>
                <div>
-          <li><Link style={mylinks}  to='pages/display'>Show Data</Link></li>
+          <Li><Link style={mylinks}  to='pages/display'>Show Data</Link></Li>
           </div>
                <div className='dropdown-divider text-grey' style={mylist} ></div>
-          <li style={mylist} ><Link style={mylinks}    to='Logout'>Logout</Link></li>
+          <Li style={mylist} ><Link style={mylinks}    to='Logout'>Logout</Link></Li>
   
           </ul>
           </Dropdown>
