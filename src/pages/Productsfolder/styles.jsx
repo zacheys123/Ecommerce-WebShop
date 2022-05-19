@@ -14,7 +14,7 @@ export default makeStyles((theme)=>({
         },
         prodpage:{
             marginTop:'5.8rem',
-             maxWidth:'91%',
+             maxWidth:'91.4%',
         [theme.breakpoints.down('md','sm')]:{
              marginLeft:'-15.6rem',
              maxWidth:'100%',

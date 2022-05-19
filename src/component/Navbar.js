@@ -6,17 +6,7 @@ import logo from '../assests/commerce.jpg'
 import useStyles from './navbar/styles'
 import {Container,Typography,IconButton,Avatar,Button} from '@mui/material'
 
-
-export default function Navbar(props){
-const[showprofile,setProfile]=useState(false);
-const[isresponsive,setresponsive]=useState(false);
-const[isopen,setOpen]=useState(false);
-const classes=useStyles()
-
-const profileref=useRef(null)
-
-
-      const  mystyle={
+const  mystyle={
             color: 'violet',
             fontFamily:'sans',
             textDecoration:'none',
@@ -45,6 +35,17 @@ const profileref=useRef(null)
 
          }
 
+export default function Navbar(props){
+const[showprofile,setProfile]=useState(false);
+const[isresponsive,setresponsive]=useState(false);
+const[isopen,setOpen]=useState(false);
+const[issettings,setSettings]=useState(false);
+const classes=useStyles()
+
+const profileref=useRef(null)
+
+
+      
     return (
        
 <div className={classes.container}>
@@ -54,12 +55,11 @@ const profileref=useRef(null)
    <em className={classes.text}> ed@Keys Market</em>
    </Typography>
    </Link>
-   {isresponsive ? 
-<ul style={{justifyContent:'flex-end'}} className='d-flex justify-content-md-base align-items-center '>
+<ul style={{justifyContent:'flex-end'}} className='d-flex justify-content-md-base align-items-center my-3 '>
    <Typography variant="" color='violet' gutterBottom>
         <li className={classes.item}>
         <Link style={mystyle} to="/"></Link>
-         <Span><HomeTwoTone sx={{'color':'darkgreen'}}/></Span>
+         <Span><HomeTwoTone sx={{'color':'wheat'}}/></Span>
            </li>
    </Typography>
 
@@ -67,7 +67,7 @@ const profileref=useRef(null)
        <li  className={classes.item}> 
         <Link className={classes.item}style={mystyle} to="pages/contact">
         Contact
-        <Span><EmailRounded sx={{'color':'darkgreen'}}/></Span>
+        <Span><EmailRounded sx={{'color':'wheat'}}/></Span>
         </Link>
         </li >
         </Typography>
@@ -75,15 +75,14 @@ const profileref=useRef(null)
         <li className={classes.item}>
         <Link style={mystyle} to="pages/about">
         About Us
-        <Span><GroupRounded sx={{'color':'darkgreen'}}/></Span>
+        <Span><GroupRounded sx={{'color':'wheat'}}/></Span>
         </Link>
         </li>
     </Typography>
     <Typography>
         <li  className={classes.item}>
         <Link style={mystyle} to="pages/signup">
-       <Button sx={{'borderColor':'navy'}} variant="outlined" > Signup</Button>
-        <Span><PersonAddAltRounded sx={{'color':'darkgreen'}}/></Span>
+       <Button   sx={{'borderColor':'yellow','color':'lightgreen','fontSize':'1rem','fontWeight':'bold'}} variant="outlined" > Signup</Button>
         </Link>
         </li>
     </Typography>
@@ -96,7 +95,12 @@ const profileref=useRef(null)
     </Typography>
 
     <menu className={classes.menu}>
-            <Avatar onClick={()=>{setProfile(true)}} src={props.firstname} sx={{'marginLeft':'2rem','marginRight':'-1rem','height':'4rem','width':'4rem','cursor':'pointer'}}/>
+    {issettings &&
+    <div className={classes.settings}>
+    Open user settings</div>
+    }
+            <Avatar onMouseOver={()=>setSettings(true)}
+            onMouseOut={()=>setSettings(false)} onClick={()=>{setProfile(true)}} src={props.firstname} sx={{'marginLeft':'2rem','marginRight':'-1rem','height':'4rem','width':'4rem','cursor':'pointer',   transition: 'all 1.4s  ease-in-out'}}/>
             {showprofile &&
          <Dropdown className='dropdown' >
           <ul>
@@ -116,11 +120,10 @@ const profileref=useRef(null)
             }
     </menu>
 </ul>
-:
-<Button type='button' sx={{'color':'wheat'}}>
-<em className={classes.modalopen}>{isopen ? <Close sx={{'fontSize':'2.6rem'}}/>  :<Menu sx={{'fontSize':'2.6rem'}}/> }</em>
-</Button>
-          }
+
+<em  className={classes.modalopen}>{isopen ? <Close sx={{'color':'white','fontSize':'1.6rem'}} onClick={()=>{setOpen(false)}} />  :<Menu  onClick={()=>{setOpen(true)}} sx={{'fontSize':'1.6rem','color':'wheat'}}/> }
+</em>
+          
 </div>
 
 

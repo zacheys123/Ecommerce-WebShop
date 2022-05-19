@@ -23,7 +23,7 @@ export default function Home() {
     <div style={{marginTop:'.4rem'}}></div>
     <HomeWrapper>
     <div  className={classes.sidebar}>
-    {ismobile ? 
+    {ismobile && 
       <div className={classes.mobilenavbar}>
          <IconButton>
           <HomeTwoTone/>
@@ -38,9 +38,8 @@ export default function Home() {
           <PersonAddAltRounded/>
          </IconButton>
       </div>
-      :
-       <Sidebar />
     }
+       <Sidebar />
        </div>
        <div className={classes.prodpage}>
       <ProductsPage>

@@ -56,6 +56,7 @@ background:'linear-gradient(black,white)',
         },
     },
     menu:{
+        position:'relative',
      marginRight:'2rem',
     [theme.breakpoints.down('md','sm')]:{
      display:'block',
@@ -65,6 +66,23 @@ background:'linear-gradient(black,white)',
         },
 
     },  
+    settings: {
+     
+        borderRadius:'10px',
+        height:'6rem',
+        width:'6rem',
+        fontFamily:'Helvetica Neue',
+        marginTop:'1rem',
+        marginLeft:'-3rem',
+        display:'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize:'1.3rem',
+        position:'absolute',
+         background:'grey',
+         opacity:'0.9',
+         zIndex:'1',
+    },
     item:{
             padding:'1rem',
             position:'relative',
@@ -100,11 +118,19 @@ background:'linear-gradient(black,white)',
         },
         modalopen:{
                 [theme.breakpoints.down('md','sm')]:{
-                       'marginLeft':'2rem',
+        'marginLeft':'2rem',
         'marginRight':'1rem',
         'cursor':'pointer',
-        display:'block'
-        },
+        display:'block',
+        fontSize:'1.6rem',
+        padding:'.01em .6rem .2rem .6rem',
+  
+        '&:hover':{
+            opacity:'.8',
+        background:'grey',
+        borderRadius:'50%',
+        }
+    },
     display:'none',
         },
 

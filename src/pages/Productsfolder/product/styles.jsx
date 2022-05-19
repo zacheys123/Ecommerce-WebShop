@@ -6,6 +6,7 @@ export default makeStyles((theme)=>({
         transform:'Scale(1)',
         transition:'all .7s ease-in-out',
         cursor:'pointer',
+        marginRight:'-3rem',
         '&:hover':{
             transform:'Scale(1.1)',
         },
@@ -16,7 +17,15 @@ export default makeStyles((theme)=>({
          '&:hover':{
            transform:'Scale(1)',
          }
-
+        }, 
+          [theme.breakpoints.up('md','lg')]:{
+           maxWidth:'98%',
+           marginRight:'-.5rem',
+            transform:'Scale(.9)',
+            overflowX:'hidden',
+         '&:hover':{
+           transform:'Scale(1)',
+         }
         },    
     },
     cardContent: {
