@@ -1,16 +1,8 @@
 import styled from "styled-components"
 
-export const NavbarWrapper=styled.div`
-    max-width: 95vw !important;
-    display:flex;
-    position:fixed;
 
-`
 // end of main nav wrapper
-export const NavbarList=styled.ul`
-padding:.1px;
-align-items: center;
-`
+
 // end of the unordered list styling
 
 export const ListItem=styled.li`
@@ -38,13 +30,6 @@ position:relative;
 `
 // end of the unordered list styling
 
-export const H3=styled.h3`
-margin-left:-18rem;
-font-size:3rem;
-font-weight:bolder;
-margin-right:-.03rem;
-text-shadow:1px 1px 1px rgba(115, 215, 255, 0.5), -1px -1px 2px yellow,1px 1px 1px violet!important ;
-`
 
 export const Span=styled.span`
 margin-left:7px;
@@ -52,7 +37,6 @@ margin-left:7px;
 
 export const Dropdown=styled.div`
 position:absolute;
-
 width:12rem;
 margin-left:6rem;
 background-color:wheat;

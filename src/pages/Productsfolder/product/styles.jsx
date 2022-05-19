@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles';
 
-export default makeStyles(()=>({
+export default makeStyles((theme)=>({
     root:{
         flexGrow:1,
         transform:'Scale(1)',
@@ -8,7 +8,16 @@ export default makeStyles(()=>({
         cursor:'pointer',
         '&:hover':{
             transform:'Scale(1.1)',
-        }
+        },
+        [theme.breakpoints.down('md')]:{
+           maxWidth:'98%',
+           marginLeft:'.5rem',
+            transform:'Scale(1)',
+         '&:hover':{
+           transform:'Scale(1)',
+         }
+        },
+    
     },
     cardContent: {
         display:'flex',

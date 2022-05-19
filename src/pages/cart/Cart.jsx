@@ -16,9 +16,6 @@ function Cart() {
       <React.Fragment>
        <div className={classes.toolbar}></div>
     <div className={classes.root}>
-      <div className={classes.left_sidebar}>
-           <Sidebar/>
-      </div>
        <div className={classes.itemspage}>
           <div className={classes.overview}>
       <Overview  />

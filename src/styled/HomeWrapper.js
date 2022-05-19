@@ -6,7 +6,7 @@ max-width:100vw;
 min-height:100vh;
 `
 export const ProductsPage=styled.div`
-flex:.9;
+flex:.8;
 background:rgb(220,245,231) !important;
 background-repeat:no-repeat;
 background-size:cover;

@@ -11,7 +11,7 @@ import HomeIcon from '@mui/icons-material/HomeTwoTone';
 import LoginIcon from '@mui/icons-material/LockOpenRounded';
 import {throttle} from 'lodash'
 import useStyles from './navbar/styles'
-import {Container,Grid,Typography,AppBar,Toolbar} from '@mui/material'
+import {Container,MenuItem,Menu,Typography,AppBar,Toolbar} from '@mui/material'
 
 export default function Navbar(props){
 const[showprofile,setProfile]=useState(false);
@@ -21,11 +21,11 @@ const profileref=useRef(null)
 
 
       const  mystyle={
-            color: 'yellowgreen',
-            fontFamily:'roboto',
+            color: 'violet',
+            fontFamily:'sans',
             textDecoration:'none',
             padding:'5px',
-            fontWeight:'400'
+            fontWeight:'bold'
         }
        const  mylist={
             listStyleType:'none',
@@ -50,65 +50,57 @@ const profileref=useRef(null)
          }
 
     return (
-
-   <Container className={classes.root}>
-   <AppBar className={classes.container}>
-   <Toolbar> 
-   <Grid>
-  <nav>
-  <NavbarList className="navbar mx-auto d-flex       justify-content-between align-items-center">
-    
-     <Grid item xs={12} sm={6} lg={3}  className="left__list align-items-center d-flex justify-content-between">
-<Link style={{textShadow:'1px 1px 1px rgba(115, 215, 255, 0.5), 11px -1px 12px yellow,1px 1px 1px violet',textDecoration:'none',fontWeight:'bolder',}} to='/'>
+       
+<div className={classes.container}>
+   <Link style={{textShadow:'1px 1px 1px rgba(115, 215, 255, 0.5), 11px -1px 12px yellow,1px 1px 1px violet',textDecoration:'none',fontWeight:'bolder',}} to='/'>
    <Typography variant='h4'  className={classes.navbrand}>
-   <img src={logo} alt="Marketplace" height='70px' width='70px' style={{borderRadius:'50%',background:'yellow',marginBottom:'-.8rem'}} />
-   ed@Keys Market
+   <img src={logo} alt="Marketplace" className={classes.img} height='70px' width='70px' style={{borderRadius:'50%',background:'yellow',marginBottom:'-.8rem'}} />
+   <em className={classes.text}> ed@Keys Market</em>
    </Typography>
    </Link>
-   <Typography variant="" gutterBottom>
-        <ListItem className="item">
+   
+<ul style={{justifyContent:'flex-end'}} className='d-flex align-items-center'>
+   <Typography variant="" color='violet' gutterBottom>
+        <li className={classes.item}>
         <Link style={mystyle} to="/">Home</Link>
          <Span><HomeIcon sx={{'color':'darkgreen'}}/></Span>
-           </ListItem>
+           </li>
    </Typography>
-     
+
      <Typography>  
-       <ListItem > 
-        <Link className="item" style={mystyle} to="pages/contact">
+       <li  className={classes.item}> 
+        <Link className={classes.item}style={mystyle} to="pages/contact">
         Contact
         <Span><ContactIcon sx={{'color':'darkgreen'}}/></Span>
         </Link>
-        </ListItem >
+        </li >
         </Typography>
    <Typography>
-        <ListItem className="item">
+        <li className={classes.item}>
         <Link style={mystyle} to="pages/about">
         About Us
         <Span><AboutIcon sx={{'color':'darkgreen'}}/></Span>
         </Link>
-        </ListItem>
+        </li>
     </Typography>
-   </Grid>
-
-        <Grid item xs={12} sm={6} lg={3} className="d-flex justify-content-between align-items-center right__list">
     <Typography>
-        <ListItem className="item">
+        <li  className={classes.item}>
         <Link style={mystyle} to="pages/signup">
         Signup
         <Span><SignupIcon sx={{'color':'darkgreen'}}/></Span>
         </Link>
-        </ListItem>
+        </li>
     </Typography>
     <Typography>
-       <ListItem>
+       <li  className={classes.item}>
          <Link style={mystyle} to="pages/logout">
         Logout
         </Link>
-      </ListItem>
+      </li>
     </Typography>
 
-    <menu>
-            <Avatar onClick={()=>{setProfile(true)}} src={props.firstname} sx={{'marginLeft':'9rem','marginRight':'-1rem','height':'4rem','width':'4rem','cursor':'pointer'}}/>
+    <menu className={classes.menu}>
+            <Avatar onClick={()=>{setProfile(true)}} src={props.firstname} sx={{'marginLeft':'2rem','marginRight':'-1rem','height':'4rem','width':'4rem','cursor':'pointer'}}/>
             {showprofile &&
          <Dropdown className='dropdown' >
           <ul>
@@ -127,14 +119,9 @@ const profileref=useRef(null)
           </Dropdown>
             }
     </menu>
-   </Grid>
-  
-        </NavbarList>
-        </nav>
-</Grid>
-</Toolbar>
-</AppBar>
-</Container>
+</ul>
+</div>
+
 
     )
   }
