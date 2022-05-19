@@ -40,7 +40,7 @@ export default function Home() {
       <main className={classes.content}>
 <Grid container justify="center" className={classes.root} spacing={3}>
 {prod && prod.map((product)=>{
-  return <Grid item xs={12} sm={6} md={3} lg={1.86} xl={1.86} key={product.id} >
+  return <Grid item xs={12} sm={6} md={4.8} lg={1.86} xl={1.86} key={product.id} >
 <Product {...product}/>
        
     </Grid>

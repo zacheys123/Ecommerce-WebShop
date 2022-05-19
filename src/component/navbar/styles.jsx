@@ -3,33 +3,55 @@ import {makeStyles} from '@mui/styles'
 export default makeStyles((theme)=>({
     container:{
 display:'flex',
+position:'fixed',
+width:'96vw',
+ zIndex:'1',
+margin:'.6rem  .6rem -.8rem 1rem',
 justifyContent:'space-between',
-background:'linear-gradient(black,blue)',
+alignItems: 'center',
+background:'linear-gradient(black,white)',
       [theme.breakpoints.down('md','sm')]:{
-         maxWidth:'98vw',
-         margin:'-.8rem 1rem',
-         background:'linear-gradient(azure,green)',
+         width:'95vw',
+         margin:'-.8rem  3rem -.8rem 1rem',
+        background:'linear-gradient(black,white,to right)',
+         position:'fixed',
+          zIndex:'1',
+         padding:'1rem',
          fontWeight:'bold',
-         opacity:'.8',
         },
     },
     navbrand:{
         fontSize:'9rem',
         fontWeight:'900',
-        marginLeft:'1rem',
-        marginRight:'-3rem',
         textShadow:'1px 1px 1px rgba(115, 215, 255, 0.5), -1px -1px 2px yellow,1px 1px 1px violet',
     },
+    img:{
+        marginLeft:'2rem',
+     [theme.breakpoints.down('md','sm')]:{
+          width:'30px',
+          height:'30px'
+        },
+    },
     text:{
-        [theme.breakpoints.down('sm')]:{
-     display:'none'
+        textShadow:'3px 1px 1px rgba(1235, 215, 225, 0.7), -1px -1px 2px red,1px 1px 1px violet',
+        fontWeight:'bold',
+        fontFamily:'apple-system,sans',
+          listStyle:'none',
+        '&:hover':{
+            listStyle:'none',
+               textShadow:'2px 1px 1px rgba(123, 215, 255, 0.5), -1px -1px 2px violet,2px 1px 1px yellow',
+        },
+        [theme.breakpoints.down('md','sm')]:{
+     display:'none',
         },
     },
     menu:{
-    [theme.breakpoints.down('sm')]:{
+     marginRight:'2rem',
+    [theme.breakpoints.down('md','sm')]:{
      display:'block',
-     width:'30px',
-     height:'30px'
+        },
+            [theme.breakpoints.down('md','sm')]:{
+          display:'none'
         },
 
     },  
@@ -61,9 +83,9 @@ background:'linear-gradient(black,blue)',
 }
         },
 
-        menu:{
-                  [theme.breakpoints.down('md','sm')]:{
-                    display:'none'
+        time:{
+        [theme.breakpoints.down('md','sm')]:{
+          display:'none'
         },
-        },
+        }
 }))

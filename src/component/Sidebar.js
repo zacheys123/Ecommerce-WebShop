@@ -41,7 +41,7 @@ const showMenu = (event)=>{
   useEffect(() => {
         setTimeout(() => {
          setList(true)
-        }, 250000000);
+        }, 2500000000);
     }, [])
 
 const closeMenu = (event)=>{

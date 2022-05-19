@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const SidebarBody=styled.div`
 background:black;
 position:fixed;
+margin-top:5.8rem;
+margin-left:.9rem;
 flex:0.15;
 border-right:1px solid rgb(39, 53, 35);
 min-height:100vh;
@@ -29,6 +31,7 @@ display:block;
 max-width:25rem;
 min-height:99.4vh;
 margin-top:.3rem;
+padding:1.4rem;
 margin-left:-3.4rem;
 `
 // end of ul styling
@@ -61,13 +64,11 @@ min-height:14rem;
 // end of form form styling
 
 export const Formbutton=styled.button`
-margin:1rem .71rem;
+margin:2rem .71rem;
 min-width:92%;
 `
 export const FormWrapper=styled.div`
-margin-left:.7rem;
-
-
+margin-left:.1rem;
 `
 // end of form wrapper styling
 
@@ -89,7 +90,6 @@ transition:transform .8s ease-in-out;
 transform:scale(1);
 list-style-type:none;
 padding-top:.9rem;
-
 margin-bottom:.3rem;
 background:rgb(33,32,25);
 min-height:3rem;

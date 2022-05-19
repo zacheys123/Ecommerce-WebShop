@@ -59,7 +59,7 @@ const profileref=useRef(null)
    </Typography>
    </Link>
    
-<ul style={{justifyContent:'flex-end'}} className='d-flex align-items-center'>
+<ul style={{justifyContent:'flex-end'}} className='d-flex justify-content-md-base align-items-center '>
    <Typography variant="" color='violet' gutterBottom>
         <li className={classes.item}>
         <Link style={mystyle} to="/">Home</Link>

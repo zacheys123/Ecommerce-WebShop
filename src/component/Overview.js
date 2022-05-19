@@ -4,6 +4,7 @@ import { Span,H1,
 import {Typography,Badge,IconButton,Grid} from '@mui/material'
 import {Link,useLocation} from 'react-router-dom'
  import ShopIcon from '@mui/icons-material/ShoppingCart';
+ import useStyles from './navbar/styles'
 import {userContext} from './userContext'
 import RemoveCartIcon from '@mui/icons-material/RemoveShoppingCart';
 const myspan={
@@ -22,6 +23,8 @@ cursor:'pointer'
 export default function Overview(props) {
   const location=useLocation()
   const {total} =useContext(userContext)
+  
+  const classes=useStyles()
     let date=new Date()
     const[time,setTime]=useState(date.toLocaleTimeString());
     const mytimer=()=>{
@@ -50,7 +53,7 @@ useEffect(()=>{
       </Badge>
     </IconButton>
     }
-       <Typography style={{fontWeight:'bold',marginRight:'1rem'}} variant='p' color='inherit'>{time}</Typography>
+       <Typography className={classes.time} style={{fontWeight:'bold',marginRight:'1rem'}} variant='p' color='inherit'>{time}</Typography>
       </div>
       </div>
         </>

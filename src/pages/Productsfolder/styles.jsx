@@ -5,21 +5,24 @@ export default makeStyles((theme)=>({
             flexGrow:1,
             padding:'1rem',
             marginBottom:'7rem',
-            [theme.breakpoints.down('md')]:{
-                maxWidth:'96%',
+            [theme.breakpoints.down('md','sm')]:{
+                width:'96%',
+                 zIndex:'1',
                 marginLeft:'.5rem',
+                background:'linear-gradient(lightblue,green)',
         }
         },
         prodpage:{
-             maxWidth:'96%',
+            marginTop:'5.8rem',
+             maxWidth:'91%',
         [theme.breakpoints.down('md','sm')]:{
-             marginLeft:'-16rem',
+             marginLeft:'-15.6rem',
              maxWidth:'100%',
-             zIndex:'1',
-             marginTop:'.7rem'
+             marginTop:'5.5rem'
         },
           [theme.breakpoints.only('xs')]:{
              marginLeft:'-19rem',
+              zIndex:'1',
              maxWidth:'100%'
         },
         },

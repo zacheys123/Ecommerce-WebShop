@@ -9,7 +9,7 @@ export default makeStyles((theme)=>({
         '&:hover':{
             transform:'Scale(1.1)',
         },
-        [theme.breakpoints.down('md')]:{
+        [theme.breakpoints.down('md','sm')]:{
            maxWidth:'98%',
            marginLeft:'.5rem',
             transform:'Scale(1)',
