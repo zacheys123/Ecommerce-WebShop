@@ -34,4 +34,8 @@
 }
 
 
-
+@media screen and (max-width:'980px') and (min-width:'300px'){
+body{
+    background:white;
+}    
+}

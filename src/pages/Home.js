@@ -2,15 +2,14 @@ import React ,{useState,useEffect,useContext} from 'react'
 import {HomeWrapper,
   ProductsPage,
   } from '../styled/HomeWrapper'
-  import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Overview from '../component/Overview'
-import {Grid} from "@mui/material"
+import {Grid,IconButton} from "@mui/material"
 import {userContext} from '../component/userContext'
 import useStyles from './Productsfolder/styles';
 import Product from './Productsfolder/product/Product'
 import Sidebar from '../component/Sidebar' 
 import { Link } from 'react-router-dom'
-import {Box} from "@mui/material"
+import {EmailRounded,PersonAddAltRounded,GroupRounded,HomeTwoTone} from '@mui/icons-material';
 export default function Home() {
 
    const[prod,setProd]=useState([])
@@ -26,7 +25,18 @@ export default function Home() {
     <div  className={classes.sidebar}>
     {ismobile ? 
       <div className={classes.mobilenavbar}>
-         
+         <IconButton>
+          <HomeTwoTone/>
+         </IconButton>
+         <IconButton>
+          <GroupRounded/>
+         </IconButton>
+         <IconButton>
+            <EmailRounded/>
+         </IconButton>
+         <IconButton>
+          <PersonAddAltRounded/>
+         </IconButton>
       </div>
       :
        <Sidebar />

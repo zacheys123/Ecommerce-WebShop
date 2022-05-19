@@ -6,13 +6,22 @@ display:'flex',
 position:'fixed',
 width:'96vw',
  zIndex:'1',
-margin:'.6rem  .6rem -.8rem 1rem',
+margin:'.1rem  .6rem -.8rem 1rem',
 justifyContent:'space-between',
 alignItems: 'center',
 background:'linear-gradient(black,white)',
       [theme.breakpoints.down('md','sm')]:{
-         width:'95vw',
-         margin:'-.8rem  3rem -.8rem 1rem',
+         width:'93vw',
+         margin:'.8rem  2rem -.8rem -.1rem',
+        background:'linear-gradient(black,white,to right)',
+         position:'fixed',
+          zIndex:'1',
+         padding:'1rem',
+         fontWeight:'bold',
+        },
+         [theme.breakpoints.only('xs')]:{
+         width:'80vw',
+         margin:'.8rem  1rem -.8rem 1rem',
         background:'linear-gradient(black,white,to right)',
          position:'fixed',
           zIndex:'1',
@@ -28,8 +37,9 @@ background:'linear-gradient(black,white)',
     img:{
         marginLeft:'2rem',
      [theme.breakpoints.down('md','sm')]:{
-          width:'30px',
-          height:'30px'
+          width:'50px',
+          height:'50px',
+          marginLeft:'-.7rem'
         },
     },
     text:{
@@ -84,8 +94,18 @@ background:'linear-gradient(black,white)',
         },
 
         time:{
-        [theme.breakpoints.down('md','sm')]:{
+        [theme.breakpoints.down('md')]:{
           display:'none'
         },
-        }
+        },
+        modalopen:{
+                [theme.breakpoints.down('md','sm')]:{
+                       'marginLeft':'2rem',
+        'marginRight':'1rem',
+        'cursor':'pointer',
+        display:'block'
+        },
+    display:'none',
+        },
+
 }))

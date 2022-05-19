@@ -1,20 +1,16 @@
 import React, { useState,useEffect,useRef} from 'react'
 import {Link} from 'react-router-dom'
-import {NavbarWrapper,NavbarList,ListItem,H3,Span,Dropdown} from '../styled/NavbarWrapper'
-import {Avatar} from "@mui/material"
-import ContactIcon from '@mui/icons-material/EmailRounded';
-import AboutIcon from '@mui/icons-material/GroupRounded';
-import SignupIcon from '@mui/icons-material/PersonAddAltRounded';
+import {H3,Span,Dropdown} from '../styled/NavbarWrapper'
+import {Menu,Close,EmailRounded,PersonAddAltRounded,GitHub,GroupRounded,HomeTwoTone} from '@mui/icons-material';
 import logo from '../assests/commerce.jpg'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import HomeIcon from '@mui/icons-material/HomeTwoTone';
-import LoginIcon from '@mui/icons-material/LockOpenRounded';
-import {throttle} from 'lodash'
 import useStyles from './navbar/styles'
-import {Container,MenuItem,Menu,Typography,AppBar,Toolbar} from '@mui/material'
+import {Container,Typography,IconButton,Avatar,Button} from '@mui/material'
+
 
 export default function Navbar(props){
 const[showprofile,setProfile]=useState(false);
+const[isresponsive,setresponsive]=useState(false);
+const[isopen,setOpen]=useState(false);
 const classes=useStyles()
 
 const profileref=useRef(null)
@@ -58,12 +54,12 @@ const profileref=useRef(null)
    <em className={classes.text}> ed@Keys Market</em>
    </Typography>
    </Link>
-   
+   {isresponsive ? 
 <ul style={{justifyContent:'flex-end'}} className='d-flex justify-content-md-base align-items-center '>
    <Typography variant="" color='violet' gutterBottom>
         <li className={classes.item}>
-        <Link style={mystyle} to="/">Home</Link>
-         <Span><HomeIcon sx={{'color':'darkgreen'}}/></Span>
+        <Link style={mystyle} to="/"></Link>
+         <Span><HomeTwoTone sx={{'color':'darkgreen'}}/></Span>
            </li>
    </Typography>
 
@@ -71,7 +67,7 @@ const profileref=useRef(null)
        <li  className={classes.item}> 
         <Link className={classes.item}style={mystyle} to="pages/contact">
         Contact
-        <Span><ContactIcon sx={{'color':'darkgreen'}}/></Span>
+        <Span><EmailRounded sx={{'color':'darkgreen'}}/></Span>
         </Link>
         </li >
         </Typography>
@@ -79,15 +75,15 @@ const profileref=useRef(null)
         <li className={classes.item}>
         <Link style={mystyle} to="pages/about">
         About Us
-        <Span><AboutIcon sx={{'color':'darkgreen'}}/></Span>
+        <Span><GroupRounded sx={{'color':'darkgreen'}}/></Span>
         </Link>
         </li>
     </Typography>
     <Typography>
         <li  className={classes.item}>
         <Link style={mystyle} to="pages/signup">
-        Signup
-        <Span><SignupIcon sx={{'color':'darkgreen'}}/></Span>
+       <Button sx={{'borderColor':'navy'}} variant="outlined" > Signup</Button>
+        <Span><PersonAddAltRounded sx={{'color':'darkgreen'}}/></Span>
         </Link>
         </li>
     </Typography>
@@ -107,7 +103,7 @@ const profileref=useRef(null)
           <li style={mylist} ><Link style={mylinks} to='profile'>View Profile</Link></li>
           <li style={mylist} ><Link style={mylinks}  to='Email'>Email someone</Link></li>
           <div>
-          <li style={mygithub} ><span><GitHubIcon/></span><Link style={mylinks}  to='pages/github'>Connect github</Link></li>
+          <li style={mygithub} ><span><GitHub/></span><Link style={mylinks}  to='pages/github'>Connect github</Link></li>
           </div>
                <div>
           <li><Link style={mylinks}  to='pages/display'>Show Data</Link></li>
@@ -120,6 +116,11 @@ const profileref=useRef(null)
             }
     </menu>
 </ul>
+:
+<Button type='button' sx={{'color':'wheat'}}>
+<em className={classes.modalopen}>{isopen ? <Close sx={{'fontSize':'2.6rem'}}/>  :<Menu sx={{'fontSize':'2.6rem'}}/> }</em>
+</Button>
+          }
 </div>
 
 

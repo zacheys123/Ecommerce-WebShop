@@ -9,6 +9,7 @@ import Logout from '../auth/Logout'
 import {Display,Cookie}from './staticPages'
 import  { commerce} from '../serverapi/commerce'
 import './App.css'
+
 import Cart from '../pages/cart/Cart'
 import {userContext} from './userContext'
 
@@ -52,7 +53,7 @@ const total=cart.total_unique_items
 
     return(
         <userContext.Provider value={{products,cart,total,handleAddCart,handleUpdateCart,handleRemoveCart,handleEmptyCart }}>
-        <MainWrapper>
+        <MainWrapper className='app'>
          <Navbar/> 
     <Routes>
         <Route exact path='/' element={<Home />} />

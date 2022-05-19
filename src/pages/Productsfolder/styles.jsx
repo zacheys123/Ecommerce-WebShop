@@ -9,7 +9,7 @@ export default makeStyles((theme)=>({
                 width:'96%',
                  zIndex:'1',
                 marginLeft:'.5rem',
-                background:'linear-gradient(lightblue,green)',
+                background:'linear-gradient(white,wheat)',
         }
         },
         prodpage:{
@@ -18,7 +18,7 @@ export default makeStyles((theme)=>({
         [theme.breakpoints.down('md','sm')]:{
              marginLeft:'-15.6rem',
              maxWidth:'100%',
-             marginTop:'5.5rem'
+             marginTop:'5.9rem'
         },
           [theme.breakpoints.only('xs')]:{
              marginLeft:'-19rem',

@@ -16,8 +16,8 @@ export default makeStyles((theme)=>({
          '&:hover':{
            transform:'Scale(1)',
          }
-        },
-    
+
+        },    
     },
     cardContent: {
         display:'flex',
