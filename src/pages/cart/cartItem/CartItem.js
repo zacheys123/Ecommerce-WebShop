@@ -5,13 +5,15 @@ import useStyles from './Itemstyles'
 export default function CartItem({item}) {
       const classes=useStyles()
         const{handleUpdateCart,handleRemoveCart} =useContext(userContext)
-         const[image,setImage]=useState('')
-  useEffect(()=>{
-    setImage(()=>item.image.url);
-  },[])
-  return (
+        const[loading,setloading]=useState(false)
+        const[dataitems,setData]=useState({image:{}})
+        useEffect(()=>{
+          setloading(true)
+          setData(item)
+        },[])
+     return (
     <Card className={classes.root}>
-  <CardMedia image={`${image}` || 'https://media.istockphoto.com/photos/nairobi-kenya-picture-id1299026534?b=1&k=20&m=1299026534&s=170667a&w=0&h=ZkZualo_Q0gIkjsfOZkV3WrXpNyrMfPGdmSR4_uXVRY='} className={classes.media}/>
+  <CardMedia image={dataitems.image.url} className={classes.media}/>
     <CardContent className={classes.content}>
     <Typography variant='h5'>{item.name}</Typography>
        <Typography variant='h5'>{item.price.formatted_with_symbol}</Typography>

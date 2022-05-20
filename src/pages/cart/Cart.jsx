@@ -14,16 +14,22 @@ function Cart() {
     if(!cart.line_items)return 'loading...'
   return (
       <React.Fragment>
-       <div className={classes.toolbar}></div>
     <div className={classes.root}>
        <div className={classes.itemspage}>
           <div className={classes.overview}>
       <Overview  />
-      <div className="dropdown-divider"></div>
+      </div>
+      <div className={classes.maincontainer}>
+      <div className={classes.left__sidebar}>
+      <h1>Hello left</h1>
       </div>
       <div className={classes.shoppingcart}>
-    <Typography variant='h4'>Shopping Cart</Typography>
+    <Typography variant='h4'></Typography>
     {isempty ? <EmptyCart /> : <FilledCart cart={cart}/>}
+     </div>
+    <div className={classes.right__sidebar}>
+    <h1>Hello right</h1>
+    </div>
     </div>
     </div>
     </div>
@@ -49,9 +55,9 @@ const FilledCart=({cart})=>{
    const{handleEmptyCart} =useContext(userContext)
   return(
         <>
-    <Grid container className={classes.shoppingcart} spacing={2}> 
+    <Grid container spacing={2}> 
     {cart.line_items.map((item)=>{
-    return <Grid key={item.id} item xs={6} sm={6} md={3} lg={3}>
+    return <Grid key={item.id} item xs={12} sm={6} md={3.7} lg={3}>
         <CartItem item={item}/>
     </Grid>
     })}

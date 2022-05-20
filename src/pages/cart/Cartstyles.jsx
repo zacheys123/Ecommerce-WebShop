@@ -2,12 +2,11 @@ import {makeStyles} from '@mui/styles'
 
 export default makeStyles(()=>({
     toolbar:{
-        height:'5.2rem',
+        
     },
     root:{
         overflowX:'hidden',
-        display:'flex',
-        background:'rgb(220,245,231)',
+        background:'rgb(244,245,231)',
         backgroundRepeat:'no-repeat',
         backgroundSize:'cover',
         maxWidth:'100%',
@@ -18,23 +17,41 @@ export default makeStyles(()=>({
         flex:'.1',
     },
        itemspage: {
-        marginLeft:'18rem',
-          marginRight:'5rem',
-          flex:'.9',
+        marginTop:'7rem',
     },
     empty:{
-        margin:'10% 10% 20% 33%',
+        margin:'5% 10% 40% 27%',
         boxShadow:'var(--box-shadow)',
-        minHeight:'5rem',
+        minHeight:'2rem',
         padding:'2rem',
         textAlign:'center',
         opacity:'.8',
         width:'30rem',
     },
     shoppingcart:{
-        maxWidth:'80%',
+        padding:'1rem',
+        marginLeft:'1rem',
+        width:'50vw',
+        flex:'.6',
+        height:'90vh',
        display:'grid',
-       gridColumnGap:'4rem'
-    }
+
+       background:'white',
+       gridColumnGap:'1rem'
+    },
+    overview:{
+        marginLeft:'1rem'
+    },
+    maincontainer:{
+        display:'flex',
+        width:'95vw'
+    },
+        left__sidebar:{
+        flex:'.2',
+        
+    },
+        right__sidebar:{
+        flex:'.2',
+    },
     
 }))
