@@ -6,30 +6,36 @@ export default makeStyles((theme) => ({
 		padding: '1rem',
 		marginBottom: '7rem',
 		[theme.breakpoints.down('md', 'sm')]: {
-			width: '96%',
+			width: '94%',
 			zIndex: '1',
-			marginLeft: '.5rem',
+			marginLeft: '.9rem',
 			background: 'linear-gradient(white,wheat)',
 		},
 	},
 	prodpage: {
-		marginTop: '5.8rem',
-		maxWidth: '91.4%',
+		background: 'rgb(220, 245, 231) !important',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		maxWidth: '83%!important',
+		marginLeft: '19.4rem !important',
+		marginRight: '-9rem',
+		minHeight: '100%',
+		boxShadow: 'var(--box-shadow)',
 		[theme.breakpoints.down('md', 'sm')]: {
-			marginLeft: '-20rem',
-			maxWidth: '110%',
-			marginTop: '5.9rem',
+			marginLeft: '0rem !important',
+			maxWidth: '97.8% !important',
+			transition: 'all .3s  ease-in-out',
+			marginTop: '4.6rem',
 		},
 		[theme.breakpoints.only('xs')]: {
-			marginLeft: '-19rem',
-			zIndex: '1',
-			maxWidth: '100%',
+			marginLeft: '-19rem !important',
+			maxWidth: '100%!important',
+		},
+		[theme.breakpoints.up('md')]: {
+			marginLeft: '18rem',
 		},
 	},
-	root: {
-		flexGrow: 1,
-		marginBottom: '-1rem',
-	},
+
 	toolbar: {
 		height: '5.2rem',
 	},
@@ -47,5 +53,15 @@ export default makeStyles((theme) => ({
 		marginLeft: '1rem',
 		marginTop: '9rem',
 		position: 'fixed',
+		[theme.breakpoints.only('xs')]: {
+			width: '4rem',
+			marginLeft: '-.1rem',
+			zIndex: '1 !important',
+			opacity: '.90',
+			background: 'black',
+		},
+		[theme.breakpoints.down('md', 'sm')]: {
+			zIndex: '1 !important',
+		},
 	},
 }));

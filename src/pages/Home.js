@@ -33,9 +33,19 @@ export default function Home(props) {
 	}, [products]);
 	props.callbackfunc(() => setmobile);
 	const classes = useStyles();
-	if (!ismobile) {
-		productpage.current.style.marginLeft = '';
-	}
+	useEffect(() => {
+		setTimeout(() => {
+			if (!ismobile) {
+				productpage.current.style.marginLeft = '-1.6rem';
+				productpage.current.style.maxWidth = '100%';
+				productpage.current.style.opacity = '.8';
+			} else {
+				productpage.current.style.marginLeft = '-20rem';
+				productpage.current.style.maxWidth = '109%';
+				productpage.current.style.opacity = '1';
+			}
+		}, 550);
+	});
 
 	return (
 		<>
@@ -131,6 +141,7 @@ export default function Home(props) {
 						</Typography>
 					</div>
 				)}
+
 				<div className={classes.sidebar}>
 					<Sidebar />
 				</div>
@@ -159,8 +170,9 @@ export default function Home(props) {
 												xs={12}
 												sm={6}
 												md={4.8}
-												lg={3.75}
-												xl={1.86}
+												lg={3}
+												mxl={2}
+												xl={2}
 												key={product.id}
 											>
 												<Product {...product} />
