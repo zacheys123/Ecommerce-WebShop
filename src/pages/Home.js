@@ -171,7 +171,7 @@ export default function Home(props) {
 												sm={6}
 												md={4.8}
 												lg={3}
-												mxl={2}
+												mxl={4}
 												xl={2}
 												key={product.id}
 											>

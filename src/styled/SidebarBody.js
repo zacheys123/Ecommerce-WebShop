@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const SidebarBody = styled.div`
 	background: black;
 	position: fixed;
-
-	margin-left: 0.4rem;
+	margin-left: 0.2rem;
 	border-right: 1px solid rgb(39, 53, 35);
 	min-height: 100vh;
 	padding: 1rem;

@@ -11,6 +11,12 @@ export default makeStyles((theme) => ({
 			marginLeft: '.9rem',
 			background: 'linear-gradient(white,wheat)',
 		},
+		[theme.breakpoints.only('mxl')]: {
+			width: '94%',
+			zIndex: '1',
+			marginLeft: '1.9rem',
+			background: 'linear-gradient(white,wheat)',
+		},
 	},
 	prodpage: {
 		background: 'rgb(220, 245, 231) !important',
@@ -28,11 +34,17 @@ export default makeStyles((theme) => ({
 			marginTop: '4.6rem',
 		},
 		[theme.breakpoints.only('xs')]: {
-			marginLeft: '-19rem !important',
-			maxWidth: '100%!important',
+			marginTop: '.6rem',
+			marginLeft: '1rem !important',
+			maxWidth: '89.6%!important',
 		},
-		[theme.breakpoints.up('md')]: {
+		[theme.breakpoints.only('md', 'mxl')]: {
 			marginLeft: '18rem',
+			maxWidth: '70.7% !important',
+			backgroundColor: 'rgba(243,343,21) !important',
+		},
+		[theme.breakpoints.up('mxl')]: {
+			maxWidth: '72.7%',
 		},
 	},
 
@@ -56,6 +68,7 @@ export default makeStyles((theme) => ({
 		[theme.breakpoints.only('xs')]: {
 			width: '4rem',
 			marginLeft: '-.1rem',
+			marginTop: '1.6rem',
 			zIndex: '1 !important',
 			opacity: '.90',
 			background: 'black',
