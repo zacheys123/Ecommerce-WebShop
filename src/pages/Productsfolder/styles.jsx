@@ -34,17 +34,18 @@ export default makeStyles((theme) => ({
 			marginTop: '4.6rem',
 		},
 		[theme.breakpoints.only('xs')]: {
-			marginTop: '.6rem',
+			marginTop: '.2rem',
 			marginLeft: '1rem !important',
 			maxWidth: '89.6%!important',
 		},
 		[theme.breakpoints.only('md', 'mxl')]: {
 			marginLeft: '18rem',
 			maxWidth: '70.7% !important',
-			backgroundColor: 'rgba(243,343,21) !important',
+			backgroundColor: 'black!important',
+			border: '1px solid grey!important',
 		},
 		[theme.breakpoints.up('mxl')]: {
-			maxWidth: '72.7%',
+			maxWidth: '71%',
 		},
 	},
 
@@ -75,6 +76,7 @@ export default makeStyles((theme) => ({
 		},
 		[theme.breakpoints.down('md', 'sm')]: {
 			zIndex: '1 !important',
+			backgroundColor: 'brown !important',
 		},
 	},
 }));

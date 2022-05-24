@@ -36,8 +36,8 @@ export default function Home(props) {
 	useEffect(() => {
 		setTimeout(() => {
 			if (!ismobile) {
-				productpage.current.style.marginLeft = '-1.6rem';
-				productpage.current.style.maxWidth = '100%';
+				productpage.current.style.marginLeft = '1.6rem!important';
+				productpage.current.style.maxWidth = '80% !important';
 				productpage.current.style.opacity = '.8';
 			} else {
 				productpage.current.style.marginLeft = '-20rem';
